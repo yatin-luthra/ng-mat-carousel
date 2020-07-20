@@ -9,7 +9,7 @@ This is a carousel component for Angular using Material Design. See [live demo](
 
 ### History and current status
 
-This is a fork and continuation of the obsoleted [```@ngmodule/material-carousel``` by Gabriel Sanches](https://github.com/gbrlsnchs/material2-carousel).
+This is a fork and prolongation of the discontinued [```@ngmodule/material-carousel``` by Gabriel Sanches](https://github.com/gbrlsnchs/material2-carousel).
 
 The current development goal is to keep the package secure and compatible with the most recent Angular version. 
 
