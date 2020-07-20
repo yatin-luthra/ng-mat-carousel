@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve demo --source-map",
     "build": "ng build && cp LICENSE dist/carousel && cp README.md dist/carousel",
-    "test": "ng test",
+    "test": "ng test carousel --watch false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ghpages": "ng build demo --prod --output-path docs --base-href \"https://ralftar.github.io/ng-mat-carousel/\""
@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^10.0.4",
     "@angular/router": "^10.0.4",
     "rxjs": "~6.6.0",
+    "hammerjs": "^2.0.8",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
