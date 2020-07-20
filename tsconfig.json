@@ -14,8 +14,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ngmodule/material-carousel": ["dist/carousel"],
-      "@ngmodule/material-carousel/*": ["dist/carousel/*"]
+      "ng-mat-carousel": ["dist/carousel"],
+      "ng-mat-carousel/*": ["dist/carousel/*"]
     },
     "plugins": [
       { "name": "@angular/language-service" },

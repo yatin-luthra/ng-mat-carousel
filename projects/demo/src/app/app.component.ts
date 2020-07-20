@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {
   MatCarouselSlideComponent,
   Orientation
-} from '@ngmodule/material-carousel';
+} from 'ng-mat-carousel';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import {
 })
 export class AppComponent {
   private static readonly INSTALL_TEXT =
-    'npm install @ngmodule/material-carousel';
+    'npm install ng-mat-carousel';
 
   public slidesList = new Array<never>(5);
   public showContent = false;

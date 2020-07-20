@@ -1,15 +1,15 @@
 {
-  "name": "@ngmodule/material-carousel",
+  "name": "ng-mat-carousel",
   "description": "Carousel component for Angular using Material Design.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gbrlsnchs/material2-carousel.git"
+    "url": "https://github.com/ralftar/ng-mat-carousel.git"
   },
   "author": "Gabriel Sanches <g@lonemaker.com>",
   "license": "MIT",
-  "homepage": "https://gbrlsnchs.github.io/material2-carousel/",
-  "bugs": "https://github.com/gbrlsnchs/material2-carousel/issues",
+  "homepage": "https://github.com/ralftar/ng-mat-carousel",
+  "bugs": "https://github.com/ralftar/ng-mat-carousel/issues",
   "keywords": ["angular", "material", "carousel", "component", "module"],
   "publishConfig": {
     "access": "public"
