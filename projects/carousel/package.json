@@ -15,9 +15,13 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@angular/material": "~9.2.4",
-    "@angular/common": "~9.1.7",
-    "@angular/core": "~9.1.7",
-    "rxjs": "~6.5.4"
+    "@angular/material": "~10.1.0",
+    "@angular/common": "~10.0.4",
+    "@angular/core": "~10.0.4",
+    "rxjs": "~6.6.0"
+  }
+,
+  "dependencies": {
+    "tslib": "^2.0.0"
   }
 }
