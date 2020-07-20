@@ -1,5 +1,5 @@
 # Material Carousel
-[![Build Status](https://travis-ci.org/gbrlsnchs/material2-carousel.svg?branch=master)](https://travis-ci.org/gbrlsnchs/material2-carousel)
+![Tests](https://github.com/ralftar/ng-mat-carousel/workflows/Tests/badge.svg?branch=master&event=push)
 [![npm version](https://badge.fury.io/js/ng-mat-carousel.svg)](https://badge.fury.io/js/ng-mat-carousel)
 [![Live demo](https://img.shields.io/badge/demo-blue.svg)](https://ralftar.github.io/ng-mat-carousel/)
 
