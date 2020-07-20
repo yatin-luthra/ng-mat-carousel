@@ -5,15 +5,15 @@
 
 
 ## About
-This is a carousel component for Angular 10 and above using Material Design. See [live demo](https://ralftar.github.io/ng-mat-carousel/).
+This is a carousel component for Angular using Material Design. See [live demo](https://ralftar.github.io/ng-mat-carousel/).
 
 ### History and current status
 
-This is a fork and continuation of  [```@ngmodule/material-carousel``` by Gabriel Sanches](https://github.com/gbrlsnchs/material2-carousel) (archeived).
+This is a fork and continuation of the obsoleted [```@ngmodule/material-carousel``` by Gabriel Sanches](https://github.com/gbrlsnchs/material2-carousel).
 
-The primary development goal is to keep the package secure and compatible with the most recent Angular version. 
+The current development goal is to keep the package secure and compatible with the most recent Angular version. 
 
-PR's are welcomed. Including bugfixes and new features.
+PR's are welcomed; including bugfixes, upgrades and enhancements.
 
 ### Installing
 `npm install --save ng-mat-carousel`
