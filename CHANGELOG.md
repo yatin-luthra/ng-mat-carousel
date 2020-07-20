@@ -6,9 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.7.0] - 2020-07-20
 ### Changed
-- Upgraded to angular 9 by ([MagLoft]).
-- Forked and rebranded to ng-mat-carousel
-- Removed travis in favor of github actions
+- Upgraded to angular 10 (v9 by [MagLoft]).
+- Forked and rebranded to ng-mat-carousel.
+- Removed travis in favor of GitHub Actions
 
 ## [0.6.0] - 2020-01-16
 ### Added
