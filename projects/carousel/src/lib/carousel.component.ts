@@ -143,6 +143,8 @@ export class MatCarouselComponent
   private destroy$ = new Subject<never>();
   private playing = false;
 
+  private width: number;
+
   constructor(
     private animationBuilder: AnimationBuilder,
     private renderer: Renderer2,
@@ -162,6 +164,8 @@ export class MatCarouselComponent
   }
 
   public ngAfterViewInit(): void {
+    this.width = this.getWidth();
+
     this.autoplay$.pipe(takeUntil(this.destroy$)).subscribe(value => {
       this.stopTimer();
       this.startTimer(value);
@@ -243,9 +247,13 @@ export class MatCarouselComponent
 
   @HostListener('window:resize', ['$event'])
   public onResize(event: Event): void {
-    // Reset carousel when window is resized
+    // Reset carousel when width is resized
     // in order to avoid major glitches.
-    this.slideTo(0);
+    const w = this.getWidth();
+    if (w !== this.width) {
+      this.width = w;
+      this.slideTo(0);
+    }
   }
 
   public onPan(event: any, slideElem: HTMLElement): void {
