@@ -4,6 +4,7 @@
     <div
       *ngIf="!hideOverlay"
       class="carousel-slide-overlay"
+      [attr.aria-label] = "ariaLabel"
       [style.background-color]="overlayColor"
     ></div>
   </div>

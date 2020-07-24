@@ -63,6 +63,7 @@ export class MatCarouselComponent
 
   @Input() public hideArrows = true;
   @Input() public hideIndicators = true;
+  @Input() public ariaLabel = 'Sliding carousel';
   @Input() public color: ThemePalette = 'accent';
 
   public get maxWidth(): string {

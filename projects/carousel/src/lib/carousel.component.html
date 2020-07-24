@@ -9,6 +9,7 @@
     #carouselList
     class="carousel-list"
     role="listbox"
+    [attr.aria-label]="ariaLabel"
     [style.flex-direction]="orientation === 'rtl' ? 'row-reverse' : 'row'"
     [style.height]="!maintainAspectRatio ? '100%' : 'auto'"
   >
@@ -33,6 +34,7 @@
     mat-icon-button
     type="button"
     tabindex="-1"
+    aria-label="Previous slide"
     [color]="color"
     [disabled]="!loop && currentIndex == 0"
     (click)="previous()"
@@ -50,6 +52,7 @@
     mat-icon-button
     type="button"
     tabindex="-1"
+    aria-label="Next slide"
     [color]="color"
     [disabled]="!loop && currentIndex == slidesList.length - 1"
     (click)="next()"
@@ -75,6 +78,7 @@
       tabindex="-1"
       mat-mini-fab
       [color]="color"
+      [attr.aria-label]="'Slide #' + i"
       [disabled]="i == currentIndex"
       (click)="slideTo(i)"
       (focus)="carouselContainer.focus()"

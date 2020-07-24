@@ -20,6 +20,7 @@ export class MatCarouselSlideComponent
   @Input() public image: SafeStyle;
   @Input() public overlayColor = '#00000040';
   @Input() public hideOverlay = false;
+  @Input() public ariaLabel = '';
   @Input() public disabled = false; // implements ListKeyManagerOption
 
   @ViewChild(TemplateRef) public templateRef: TemplateRef<any>;
