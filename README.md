@@ -63,6 +63,7 @@ import { MatCarousel, MatCarouselComponent } from 'ng-mat-carousel';
 | `useMouseWheel`       | `boolean`          | Enable navigation through mouse wheeling.                                  | `false`           |
 | `orientation`         | `Orientation`      | Orientation of the sliding panel.                                          | `'ltr'`           |
 | `svgIconOverrides`    | `SvgIconOverrides` | Override default carousel icons with registered SVG icons.                 |                   |
+| `ariaLabel`           | `string`           | Carousel accessible name                                                   | `'carousel'`      |
 
 #### Size Considerations and Recommendations
 By default, `maintainAspectRatio` is true, which means height is controlled through `proportion`.
