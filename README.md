@@ -64,6 +64,7 @@ import { MatCarousel, MatCarouselComponent } from 'ng-mat-carousel';
 | `orientation`         | `Orientation`      | Orientation of the sliding panel.                                          | `'ltr'`             |
 | `svgIconOverrides`    | `SvgIconOverrides` | Override default carousel icons with registered SVG icons.                 |                     |
 | `ariaLabel`           | `string`           | Carousel accessible name                                                   | `'Sliding carousel'`|
+| `lazyLoad`            | `booelan`          | Lazy load content                                                          | false               |
 
 #### Size Considerations and Recommendations
 By default, `maintainAspectRatio` is true, which means height is controlled through `proportion`.
@@ -101,7 +102,8 @@ import { MatCarouselSlide, MatCarouselSlideComponent } from '@ngmodule/material-
 | `image`        | `string`  | Image displayed in the slide. |               |
 | `overlayColor` | `string`  | Color of the slide's overlay. | `'#00000040'` |
 | `hideOverlay`  | `boolean` | Toggle overlay on/off.        | `false`       |
-| `disabled`     | `boolean` | Skip slide when navigating.   | `false`       |
+| `ariaLabel`    | `string`  | Image accessible name         | `'Slide'`     |
+| `load`         | `boolean` | Override lazyLoad             | `true`        |
 
 
 ## How to develop and test this component
