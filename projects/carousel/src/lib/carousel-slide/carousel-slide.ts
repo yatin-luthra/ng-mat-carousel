@@ -5,4 +5,6 @@ export interface MatCarouselSlide {
   overlayColor: string;
   hideOverlay: boolean;
   disabled: boolean;
+  load: boolean;
+  ariaLabel: string;
 }
