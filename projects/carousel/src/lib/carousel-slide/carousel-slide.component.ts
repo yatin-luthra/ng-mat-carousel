@@ -22,6 +22,7 @@ export class MatCarouselSlideComponent
   @Input() public hideOverlay = false;
   @Input() public ariaLabel = '';
   @Input() public disabled = false; // implements ListKeyManagerOption
+  @Input() public load = false;
 
   @ViewChild(TemplateRef) public templateRef: TemplateRef<any>;
 

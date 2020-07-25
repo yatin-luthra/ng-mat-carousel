@@ -15,10 +15,12 @@ export interface MatCarousel {
   proportion: number;
   slides: number;
   svgIconOverrides: SvgIconOverrides;
+  lazyLoad: boolean;
   // Accessibility.
   useKeyboard: boolean;
   useMouseWheel: boolean;
   orientation: Orientation;
+  ariaLabel: string;
 }
 
 export type Orientation = 'ltr' | 'rtl';

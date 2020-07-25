@@ -25,7 +25,7 @@
       (panend)="onPanEnd($event, carouselSlide)"
       (pancancel)="onPanEnd($event, carouselSlide)"
     >
-      <ng-container [ngTemplateOutlet]="slide.templateRef"></ng-container>
+      <ng-container *ngIf="slide.load" [ngTemplateOutlet]="slide.templateRef"></ng-container>
     </li>
   </ul>
 

@@ -39,6 +39,7 @@ enum Direction {
 export class MatCarouselComponent
   implements AfterContentInit, AfterViewInit, MatCarousel, OnDestroy {
   @Input() public timings = '250ms ease-in';
+  @Input() public lazyLoad = true;
   @Input() public svgIconOverrides: SvgIconOverrides;
 
   @Input()
@@ -153,12 +154,20 @@ export class MatCarouselComponent
   ) {}
 
   public ngAfterContentInit(): void {
+    if (!this.lazyLoad) {
+      this.slidesList.forEach( (slide) => slide.load = true );
+    } else {
+      this.slidesList.first.load = true;
+    }
+
     this.listKeyManager = new ListKeyManager(this.slidesList)
       .withVerticalOrientation(false)
       .withHorizontalOrientation(this._orientation)
       .withWrap(this._loop);
 
     this.listKeyManager.updateActiveItem(0);
+    
+
     this.listKeyManager.change
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => this.playAnimation());
@@ -364,7 +373,11 @@ export class MatCarouselComponent
     );
     const animation = factory.create(this.carouselList.nativeElement);
 
-    animation.onStart(() => (this.playing = true));
+    animation.onStart(() => {
+      this.playing = true;
+      var slide = this.slidesList.find( (s, i) => i == this.currentIndex); // xxx
+      slide.load = true;
+    });
     animation.onDone(() => {
       this.change.emit(this.currentIndex);
       this.playing = false;
