@@ -39,7 +39,7 @@ enum Direction {
 export class MatCarouselComponent
   implements AfterContentInit, AfterViewInit, MatCarousel, OnDestroy {
   @Input() public timings = '250ms ease-in';
-  @Input() public lazyLoad = true;
+  @Input() public lazyLoad = false;
   @Input() public svgIconOverrides: SvgIconOverrides;
 
   @Input()
