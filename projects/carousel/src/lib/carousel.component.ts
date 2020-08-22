@@ -158,6 +158,8 @@ export class MatCarouselComponent
       this.slidesList.forEach( (slide) => slide.load = true );
     } else {
       this.slidesList.first.load = true;
+      this.slidesList.find( (s, i) => i === 1 % this.slidesList.length).load = true; 
+      this.slidesList.find( (s, i) => i === (this.slidesList.length - 1) % this.slidesList.length).load = true;
     }
 
     this.listKeyManager = new ListKeyManager(this.slidesList)
@@ -166,7 +168,6 @@ export class MatCarouselComponent
       .withWrap(this._loop);
 
     this.listKeyManager.updateActiveItem(0);
-    
 
     this.listKeyManager.change
       .pipe(takeUntil(this.destroy$))
@@ -375,12 +376,12 @@ export class MatCarouselComponent
 
     animation.onStart(() => {
       this.playing = true;
-      var slide = this.slidesList.find( (s, i) => i == this.currentIndex); // xxx
-      slide.load = true;
     });
     animation.onDone(() => {
       this.change.emit(this.currentIndex);
       this.playing = false;
+      this.slidesList.find( (s, i) => i === (this.currentIndex + 1) % this.slidesList.length).load = true;
+      this.slidesList.find( (s, i) => i === (this.currentIndex - 1 + this.slidesList.length)  % this.slidesList.length).load = true;
       this.renderer.setStyle(
         this.carouselList.nativeElement,
         'transform',
